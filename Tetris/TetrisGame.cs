@@ -236,8 +236,8 @@ namespace Tetris
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
-            ProcessUserInput(gameTime);
-            //ProcessUserInputKeyboard(gameTime);
+            //ProcessUserInput(gameTime);
+            ProcessUserInputKeyboard(gameTime);
 
             gameDelayTimer += gameTime.ElapsedGameTime.Milliseconds;
 

@@ -88,7 +88,7 @@ namespace Tetris
                     tetrisGame.Enabled = false;
                     tetrisGame.Visible = false;
 
-                    if (GamePad.GetState(PlayerIndex.One).Buttons.Start == ButtonState.Pressed)
+                    if (GamePad.GetState(PlayerIndex.One).Buttons.Start == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Enter))
                         gameState = 1;
 
                     break;
@@ -102,13 +102,13 @@ namespace Tetris
                     tetrisGame.Enabled = false;
                     tetrisGame.Visible = false;
 
-                    if (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed)
+                    if (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Enter))
                     {
                         tetrisGame.Initialize();
                         gameState = 1;
                     }
 
-                    if (GamePad.GetState(PlayerIndex.One).Buttons.B == ButtonState.Pressed)
+                    if (GamePad.GetState(PlayerIndex.One).Buttons.B == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                         this.Exit();
 
                     break;
